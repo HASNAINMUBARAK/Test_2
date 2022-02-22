@@ -60,7 +60,7 @@ const Navbar = () => {
                  <Link to="/contact" className={classes.anchors}>
              <h4 >Market Place</h4>
                  </Link>
-                 <Link to="/contact" className={classes.anchors}>
+                 <Link to="/activity" className={classes.anchors}>
              <h4   >Activity</h4>
                  </Link>
 

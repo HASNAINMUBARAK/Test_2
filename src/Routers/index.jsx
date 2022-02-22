@@ -4,6 +4,7 @@ import Navbar from "../Components/Navbar";
 import Home from "../Pages/Home";
 import About from "../Pages/About";
 import Contact from "../Pages/Contact";
+import Activity from "../Pages/Activity";
 import Footer from "../Components/Footer";
 
 const Routers = () => {
@@ -15,6 +16,8 @@ const Routers = () => {
           <Route path="/" exact element={<Home />} />
           <Route path="/About" exact element={<About />} />
           <Route path="/contact" exact element={<Contact />} />
+          <Route path="/activity" exact element={<Activity />} />
+          
         </Routes>
         <Footer />
       </Router>
