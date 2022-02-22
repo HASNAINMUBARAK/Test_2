@@ -24,6 +24,9 @@ outer: {
     background: "#612626",
     border: "none",
     borderRadius:"5px",
+    [theme.breakpoints.down("md")]: {
+        width: "200px",
+      },
 },
     card_img: {
     width: "100%",

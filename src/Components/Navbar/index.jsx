@@ -8,6 +8,7 @@ import { useState } from "react";
 import MenuIcon from "@material-ui/icons/Menu";
 import IconButton from "@material-ui/core/IconButton";
 import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
+import {ClickAwayListener} from "@material-ui/core";
 
 const Navbar = () => {
     const classes = useStyles()
@@ -21,6 +22,17 @@ const Navbar = () => {
   };
   const match = useMediaQuery("(max-width: 960px)");
 
+
+
+  const [open1, setOpen1] = React.useState(false);
+  const handleClick = () => {
+    setOpen1((prev) => !prev);
+  };
+  const handleClickAway = () => {
+    setOpen1(false);
+  };
+
+
   return (
     <>
      <Grid container justifyContent='space-evenly' className={classes.contain}>
@@ -28,7 +40,7 @@ const Navbar = () => {
         <Link to="/" > <img src={logo} alt=" " className={classes.logo}/> </Link>
          </Grid>
 
-         <Grid item container direction="row" xs={4} sm={4} md={5} lg={5}
+         <Grid item container direction="row" xs={4} sm={4} md={6} lg={5}
           className={classes.anchors_container}>
              
          {match ? (
@@ -42,13 +54,13 @@ const Navbar = () => {
       <Link to="/" className={classes.anchors} >
              <h4  >Curated Drops</h4>
                  </Link>
-                 <Link to="/" className={classes.anchors}>
+                 <Link to="/contact" className={classes.anchors}>
              <h4 >Verified Drops</h4>
                  </Link>
-                 <Link to="/" className={classes.anchors}>
+                 <Link to="/contact" className={classes.anchors}>
              <h4 >Market Place</h4>
                  </Link>
-                 <Link to="/" className={classes.anchors}>
+                 <Link to="/contact" className={classes.anchors}>
              <h4   >Activity</h4>
                  </Link>
 
@@ -60,8 +72,28 @@ const Navbar = () => {
          </Grid>
          <Grid item container xs={2} sm={3} md={3} lg={3} className={classes.third_div}>
          <Link to="/" className={classes.anchors} >
-             <h4>Company</h4>
-             <ArrowDropDownIcon />
+            
+         <ClickAwayListener onClickAway={handleClickAway}>
+                  <div className={classes.root}>
+                    <Link
+                      to="/company"
+                      type="button"
+                      className={classes.link}
+                      onClick={handleClick}
+                      style={{ background: "#192C30" }}
+                    >
+                      Company <ArrowDropDownIcon />
+                    </Link>
+                    {open1 ? (
+                      <div className={classes.dropdown}>
+                        <p> What is an NFTs?</p>
+                        <p> What is an NFTs?</p>
+                        <p> What is an NFTs?</p>
+                      </div>
+                    ) : null}
+                  </div>
+                </ClickAwayListener>
+            
                  </Link>
              <SearchIcon className={classes.search_icon} />
          </Grid>
@@ -80,7 +112,7 @@ const useStyles = makeStyles((theme)=>({
      background: "#192c30",
      padding: "24px 20px",
      [theme.breakpoints.down("sm")]:{
-        justifyContent: "space-between",
+         
       },
  },
  logo: {
@@ -103,7 +135,8 @@ const useStyles = makeStyles((theme)=>({
       order:4,
     },
     [theme.breakpoints.down("md")]:{
-        justifyContent: "center",
+      display: "flex",  
+      justifyContent: "flex-end",
       },
      
     
@@ -176,6 +209,31 @@ last_grid: {
   },
   humberger: {
       color: "white",
-  }
+  },
+
+
+  root: {
+    position: 'relative',
+  },
+  dropdown: {
+    position: 'absolute',
+    width: "120px",
+    border:"1px solid ",
+    borderRadius: "10px",
+    top: 28,
+    right: 0,
+    left: 0,
+    zIndex: 1,
+    padding: 15,
+    backgroundColor: "#192c30",
+  },
+  link: {
+    display: "flex",
+    alignItems: "center",
+    color: "white",
+    textDecoration: "none",
+
+  },
+
  }))
 export default Navbar;
