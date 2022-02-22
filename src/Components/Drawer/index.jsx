@@ -11,19 +11,22 @@ const DrawerComponent = ({ openDrawer, handleDrawerClose }) => {
   return (
     <>
       <Drawer anchor="top" open={openDrawer}  >
-        <List className={classes.left_drawer}>
-          <ChevronLeftIcon onClick={handleDrawerClose} />
-          <ListItem divider button>
-            <ListItemText>Curated Drops</ListItemText>
+        <List className={classes.left_drawer} >
+          <ChevronLeftIcon onClick={handleDrawerClose}   />
+          <ListItem divider button >
+            <ListItemText >Curated Drops</ListItemText>
+          </ListItem>
+          <ListItem divider button >
+            <ListItemText  >Verified Drops</ListItemText>
           </ListItem>
           <ListItem divider button>
-            <ListItemText>Verified Drops</ListItemText>
-          </ListItem>
-          <ListItem divider button>
-            <ListItemText>Market Plac</ListItemText>
+            <ListItemText>Market Place</ListItemText>
           </ListItem>
           <ListItem divider button>
             <ListItemText>Activity</ListItemText>
+          </ListItem>
+          <ListItem divider button>
+          <button className={classes.btn1}>Company</button>
           </ListItem>
           <ListItem divider button>
           <button className={classes.btn1}>Log In</button>

@@ -61,160 +61,38 @@ des: "Daydreams Open Edition by Noah Kocher",
 export const data2 = [
   {
     img: Rectangle1,
-    title: "Art Work",
-    link: "@jhone,templet",
-    des: "OpenSea is the world's first and largest NFT marketplace",
+    title: "Y could be an astronaut",
+    edition: "1 Editions",
+    des: "$1,300.00 Floor Price",
   },
   {
     img: Rectangle2,
-    title: "Art Work",
-    link: "@jhone,templet",
-    des: "OpenSea is the world's first and largest NFT marketplace",
+    title: "X could be an astronaut",
+    edition: "14 Editions",
+    des: "$1,300.00 Floor Price",
   },
   {
     img: Rectangle3,
-    title: "Art Work",
-    link: "@jhone,templet",
-    des: "OpenSea is the world's first and largest NFT marketplace",
+    title: "P could be an astronaut",
+    edition: "40 Editions",
+    des: "$1,300.00 Floor Price",
 },
 {
   img: Rectangle3,
-  title: "Art Work",
-  link: "@jhone,templet",
-  des: "OpenSea is the world's first and largest NFT marketplace",
+  title: "A could be an astronaut",
+  edition: "2 Editions",
+  des: "$1,300.00 Floor Price",
 },
 {
   img: Rectangle1,
-  title: "Art Work",
-  link: "@jhone,templet",
-  des: "OpenSea is the world's first and largest NFT marketplace",
+  title: "I could be an astronaut",
+  edition:"16 Editions",
+  des: "$1,300.00 Floor Price",
 },
 {
   img: Rectangle2,
-  title: "Art Work",
-  link: "@jhone,templet",
-  des: "OpenSea is the world's first and largest NFT marketplace",
+  title: "An astronaut",
+  edition: "50 Editions",
+  des: "$1,300.00 Floor Price",
 }
-];
-export const data1 = [
-  {
-    img: Rectangle1,
-    title: "Art Work",
-    des: "OpenSea is the world's ",
-  },
-  {
-    img: Rectangle2,
-    title: "Art Work",
-    des: "OpenSea is the world's ",
-  },
-  {
-    img: Rectangle3,
-    title: "Art Work",
-    des: "OpenSea is the world's",
-},
-{
-  img: Rectangle3,
-  title: "Art Work",
-  des: "OpenSea is the world's ",
-},
-{
-  img: Rectangle1,
-  title: "Art Work",
-  des: "OpenSea is the world's ",
-},
-{
-  img: Rectangle2,
-  title: "Art Work",
-  des: "OpenSea is the world's",
-},
-{
-  img: Rectangle1,
-  title: "Art Work",
-  des: "OpenSea is the world's ",
-},
-{
-  img: Rectangle2,
-  title: "Art Work",
-  des: "OpenSea is the world's ",
-},
-{
-  img: Rectangle3,
-  title: "Art Work",
-  des: "OpenSea is the world's",
-},
-{
-img: Rectangle3,
-title: "Art Work",
-des: "OpenSea is the world's ",
-},
-{
-img: Rectangle1,
-title: "Art Work",
-des: "OpenSea is the world's ",
-},
-{
-img: Rectangle2,
-title: "Art Work",
-des: "OpenSea is the world's",
-},
-{
-  img: Rectangle1,
-  title: "Art Work",
-  des: "OpenSea is the world's ",
-},
-{
-  img: Rectangle2,
-  title: "Art Work",
-  des: "OpenSea is the world's ",
-},
-{
-  img: Rectangle3,
-  title: "Art Work",
-  des: "OpenSea is the world's",
-},
-{
-img: Rectangle3,
-title: "Art Work",
-des: "OpenSea is the world's ",
-},
-{
-img: Rectangle1,
-title: "Art Work",
-des: "OpenSea is the world's ",
-},
-{
-img: Rectangle2,
-title: "Art Work",
-des: "OpenSea is the world's",
-},
-{
-  img: Rectangle1,
-  title: "Art Work",
-  des: "OpenSea is the world's ",
-},
-{
-  img: Rectangle2,
-  title: "Art Work",
-  des: "OpenSea is the world's ",
-},
-{
-  img: Rectangle3,
-  title: "Art Work",
-  des: "OpenSea is the world's",
-},
-{
-img: Rectangle3,
-title: "Art Work",
-des: "OpenSea is the world's ",
-},
-{
-img: Rectangle1,
-title: "Art Work",
-des: "OpenSea is the world's ",
-},
-{
-img: Rectangle2,
-title: "Art Work",
-des: "OpenSea is the world's",
-}
-];
+]; 

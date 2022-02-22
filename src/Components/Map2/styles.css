@@ -1,0 +1,10 @@
+.section-card{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 10px;
+    display: flex;
+    border-radius: 5px;
+
+
+}
