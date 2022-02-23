@@ -31,7 +31,14 @@ const Navbar = () => {
   const handleClickAway = () => {
     setOpen1(false);
   };
-
+// function for dropdown on mouse enter and leave
+  const [none, setNone] = useState(false);
+  const handleEnter = () => {
+    setNone(true);
+  };
+  const handleLeave = () => {
+    setNone(false);
+  };
 
   return (
     <>
@@ -86,16 +93,47 @@ const Navbar = () => {
                     </Link>
                     {open1 ? (
                       <div className={classes.dropdown}>
-                        <p> What is an NFTs?</p>
-                        <p> What is an NFTs?</p>
-                        <p> What is an NFTs?</p>
+                        <p className={classes.nfts}> What is an NFTs?</p>
+                        <p className={classes.nfts}> What is an NFTs?</p>
+                        <p className={classes.nfts}> What is an NFTs?</p>
                       </div>
                     ) : null}
                   </div>
                 </ClickAwayListener>
             
                  </Link>
-             <SearchIcon className={classes.search_icon} />
+             
+                 <div onMouseEnter={handleEnter} onMouseLeave={handleLeave}>
+                 <SearchIcon className={classes.search_icon} />
+                  {none ? (
+                    <div className={classes.dropdown1}>
+                      <li className={classes.dropdownlist}>
+                        {" "}
+                        <a href= "https://v4.mui.com/getting-started/installation/"
+                        className={classes.dropdownlista} target="_blank"> My Jobs</a>
+                      </li>
+                      <li className={classes.dropdownlist}>
+                        {" "}
+                        <a href= "https://v4.mui.com/getting-started/installation/"
+                         target="_blank" className={classes.dropdownlista}>All contracts</a>
+                      </li>
+                      <li className={classes.dropdownlist}>
+                        <a href= "https://v4.mui.com/getting-started/installation/"
+                        className={classes.dropdownlista} target="_blank"> Work Diary</a>{" "}
+                      </li>
+                      <li className={classes.dropdownlist}>
+                        {" "}
+                        <a href= "https://v4.mui.com/getting-started/installation/"
+                        className={classes.dropdownlista} target="_blank" >All contracts</a>
+                      </li>
+                      <li className={classes.dropdownlist}>
+                        <a href= "https://v4.mui.com/getting-started/installation/"
+                        className={classes.dropdownlista} target="_blank" > Work Diary</a>{" "}
+                      </li>
+                    </div>
+                  ) : null}
+                </div>
+
          </Grid>
 
          <Grid item  container xs={2} sm={2} md={3} lg={3} className={classes.btns}>
@@ -217,15 +255,43 @@ last_grid: {
   },
   dropdown: {
     position: 'absolute',
-    width: "120px",
-    border:"1px solid ",
+    width: "150px",
+    border:"1px solid #192c30",
     borderRadius: "10px",
     top: 28,
     right: 0,
     left: 0,
     zIndex: 1,
-    padding: 15,
-    backgroundColor: "#192c30",
+    backgroundColor: "white",
+    color: "white",
+  },
+  nfts: {
+    color: "#192c30",
+    "&:hover": {
+      backgroundColor:"#c1c1c1",
+    },
+  },
+  dropdown1: {
+    cursor: "pointer",
+    position: "absolute",
+    border: "1px solid #192c30",
+    borderRadius: "5px",
+    color: "#192c30",
+    background: "white",
+    width: "130px"
+
+  },
+  dropdownlist: {
+    listStyle: "none",
+    "&:hover": {
+      backgroundColor:"#c1c1c1",
+    },
+  },
+  dropdownlista: {
+    target: "_blank",
+    textDecoration: "none",
+    color: "#192c30",
+    margin: "10px",
   },
   link: {
     display: "flex",
